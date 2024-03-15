@@ -47,13 +47,13 @@ cmaker {
 
 android {
     namespace = "me.kofua.qmhelper"
-    compileSdk = 33
+    compileSdk = 34
     ndkVersion = "25.1.8937393"
 
     defaultConfig {
         applicationId = "me.kofua.qmhelper"
         minSdk = 23
-        targetSdk = 33
+        targetSdk = 34
         versionCode = gitCommitCount
         versionName = appVerName
 
