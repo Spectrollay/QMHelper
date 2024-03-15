@@ -282,11 +282,8 @@ class QMPackage private constructor() {
                 with = method { name = withMethod.name }
                 type = field { name = fields[startPos].name }
                 title = field { name = fields[startPos + 1].name }
-                if (clientVersionCode >= 4958/*13.0.0.8*/) {
-                    rightDesc = field { name = fields[startPos + 2].name }
-                } else {
-                    rightDesc = field { name = fields[startPos + 3].name }
-                }
+                rightDesc = field { name = fields[startPos + 3].name }
+                redDotListener = field { name = redDotListenerField.name }
                 redDotListener = field { name = redDotListenerField.name }
                 builder = SettingBuilder().apply {
                     clazz = clazz { name = settingBuilderClass.name }
@@ -294,11 +291,7 @@ class QMPackage private constructor() {
                     type = field { name = builderFields[0].name }
                     title = field { name = builderFields[1].name }
                     rightDesc = field { name = builderFields[2].name }
-                    if (clientVersionCode >= 4958/*13.0.0.8*/) {
-                        summary = field { name = builderFields[4].name }
-                    } else {
-                        summary = field { name = builderFields[5].name }
-                    }
+                    summary = field { name = builderFields[5].name }
                     switchListener = field { name = switchListenerField.name }
                     clickListener = field { name = clickListenerField.name }
                 }
